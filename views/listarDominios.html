@@ -1,0 +1,23 @@
+<div class="jumbotron text-center">
+  <h2>{{<.title>}}</h2>
+  <hr>
+  <p>{{<.message>}}</p>
+</div>
+<div ng-controller="dominioController"  width="100%">
+  <table datatable="ng" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="d in data">
+        <td>{{d.Id}}</td>
+        <td>{{d.Nombre}}</td>
+        <td>{{d.Descripcion}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

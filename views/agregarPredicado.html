@@ -1,0 +1,27 @@
+<div class="jumbotron text-center">
+  <h2>{{ title }}</h2>
+  <hr>
+  <p>{{ message }}</p>
+</div>
+<div ng-controller="agregarPredicadoController">
+  <form name="predicadoForm">
+    <div class="form-group">
+      <label for="dominio">Dominio:</label>
+      <select name="dominio" ng-model="predicado.dominio.id">
+        <option ng-repeat="option in dominios" ng-value="option.Id">{{option.Nombre}}</option>
+      </select><br>
+      <label for="name">Nombre:</label>
+      <input name="name" type="text" ng-model="predicado.name"/><br>
+      <label for="description">Descripción:</label>
+      <input name="description" type="text" ng-model="predicado.description"/><br>
+      <label for="tipo">Tipo:</label>
+      <select name="tipopredicado" ng-model="predicado.tipopredicado.id">
+        <option ng-repeat="option in tipos" ng-value="option.Id">{{option.Nombre}}</option>
+      </select>
+    </div>
+
+    <input type="reset" ng-click="reset(domainForm)" value="Limpiar" />
+    <input type="submit" ng-click="add()" value="Guardar"/>
+  </form>
+  <pre>Predicado = {{predicado | json}}</pre>
+</div>

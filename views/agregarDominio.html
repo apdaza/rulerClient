@@ -1,0 +1,19 @@
+<div class="jumbotron text-center">
+  <h2>{{ title }}</h2>
+  <hr>
+  <p>{{ message }}</p>
+</div>
+<div ng-controller="agregarDominioController">
+  <form name="domainForm">
+    <div class="form-group">
+      <label for="name">Nombre:</label>
+      <input name="name" type="text" ng-model="domain.name"/><br>
+      <label for="description">Descripción:</label>
+      <input name="description" type="text" ng-model="domain.description"/>
+    </div>
+
+    <input type="reset" ng-click="reset(domainForm)" value="Limpiar" />
+    <input type="submit" ng-click="add()" value="Guardar"/>
+  </form>
+  <pre>Domain = {{domain | json}}</pre>
+</div>
