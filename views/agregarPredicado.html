@@ -3,25 +3,42 @@
   <hr>
   <p>{{ message }}</p>
 </div>
-<div ng-controller="agregarPredicadoController">
-  <form name="predicadoForm">
+<div ng-controller="agregarPredicadoController" class="container">
+  <form name="predicadoForm" class="form-horizontal">
     <div class="form-group">
-      <label for="dominio">Dominio:</label>
-      <select name="dominio" ng-model="predicado.dominio.id">
-        <option ng-repeat="option in dominios" ng-value="option.Id">{{option.Nombre}}</option>
-      </select><br>
-      <label for="name">Nombre:</label>
-      <input name="name" type="text" ng-model="predicado.name"/><br>
-      <label for="description">Descripción:</label>
-      <input name="description" type="text" ng-model="predicado.description"/><br>
-      <label for="tipo">Tipo:</label>
-      <select name="tipopredicado" ng-model="predicado.tipopredicado.id">
-        <option ng-repeat="option in tipos" ng-value="option.Id">{{option.Nombre}}</option>
-      </select>
+      <label for="dominio" class="col-sm-2 control-label">Dominio:</label>
+      <div class="col-sm-10">
+        <select name="dominio" ng-model="predicado.dominio.id" class="form-control">
+          <option ng-repeat="option in dominios" ng-value="option.Id">{{option.Nombre}}</option>
+        </select>
+      </div>
     </div>
-
-    <input type="reset" ng-click="reset(domainForm)" value="Limpiar" />
-    <input type="submit" ng-click="add()" value="Guardar"/>
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Nombre:</label>
+      <div class="col-sm-10">
+        <input name="name" type="text" ng-model="predicado.name" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description" class="col-sm-2 control-label">Descripción:</label>
+      <div class="col-sm-10">
+        <input name="description" type="text" ng-model="predicado.description" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tipo" class="col-sm-2 control-label">Tipo:</label>
+      <div class="col-sm-10">
+        <select name="tipopredicado" ng-model="predicado.tipopredicado.id" class="form-control">
+          <option ng-repeat="option in tipos" ng-value="option.Id">{{option.Nombre}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <input type="reset" ng-click="reset(domainForm)" value="Limpiar" class="btn btn-default"/>
+        <input type="submit" ng-click="add()" value="Guardar" class="btn btn-primary"/>
+      </div>
+    </div>
   </form>
-  <pre>Predicado = {{predicado | json}}</pre>
+  <!--pre>Predicado = {{predicado | json}}</pre-->
 </div>
