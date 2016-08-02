@@ -16,7 +16,7 @@
 
     <body>
       <header>
-        <img class="logo" src="static/img/logoud.png"  alt="Universidad Distrital"/>
+        <img class="logo" src="/static/img/logoud.png"  alt="Universidad Distrital"/>
         <h1 class="app_title">{{<.Title>}}</h1>
       </header>
       <nav class="navbar navbar-inverse" role="navigation" ng-controller="parserMenu" style="width:100%;">
