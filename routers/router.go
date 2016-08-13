@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"rulerClient/controllers"
+	"github.com/apdaza/rulerClient/controllers"
 	"github.com/astaxie/beego"
 )
 

@@ -1,11 +1,10 @@
 package main
 
 import (
-	_ "rulerClient/routers"
+	_ "github.com/apdaza/rulerClient/routers"
 	"github.com/astaxie/beego"
 )
 
 func main() {
 	beego.Run()
 }
-

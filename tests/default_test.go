@@ -6,7 +6,7 @@ import (
 	"testing"
 	"runtime"
 	"path/filepath"
-	_ "rulerClient/routers"
+	_ "github.com/apdaza/rulerClient/routers"
 
 	"github.com/astaxie/beego"
 	. "github.com/smartystreets/goconvey/convey"
@@ -36,4 +36,3 @@ func TestMain(t *testing.T) {
 	        })
 	})
 }
-
